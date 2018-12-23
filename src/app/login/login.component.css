@@ -1,0 +1,79 @@
+.login-container{
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+.login-bg img{
+    width: 100%;
+}
+.welcome-text{
+    margin-top: 200px;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+}
+.form-container{
+    margin-left: 20px;    
+}
+.login-text{
+    font-family: Heebo;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.login-text span{
+    color: #8e44ad;
+}
+.input-title{
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+}
+.input-field{
+    margin-bottom: 15px;
+}
+.forgot-password{
+    padding: 10px 0px;
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8e44ad;
+}
+.login-button{
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #8e44ad;
+    color:white;
+    width: 100%;
+}
+.login-button:hover{
+    border: 1px solid #8e44ad;
+    background: white;
+    color: #8e44ad;
+    cursor: pointer;
+}
+.login-footer{
+    margin-top: 20px;
+}
