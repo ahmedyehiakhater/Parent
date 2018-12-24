@@ -1,53 +1,55 @@
-<div class="login-container">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-5 no-padding">
-        <div class="login-bg">
-          <img src="assets/images/login/background.jpg" alt="">
+<div class="container">
+  <div class="login-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-5 no-padding">
+          <div class="login-bg">
+            <img src="assets/images/login/background.jpg" alt="">
+          </div>
         </div>
-      </div>
-      <div class="col-xs-4">
-        <div class="form-container">
-          <div class="row">
-            <div class="welcome-text">
-              Welcome back!
-            </div>
-          </div>
-          <div class="row">
-            <div class="login-text">
-              Please login to access your
-              <span>Spaces</span> Dashboard
-            </div>
-          </div>
-          <div class="row">
-            <div class="error-container">
-              <div [hidden]="!loginError">
-                {{errorMessage}}
+        <div class="col-xs-4">
+          <div class="form-container">
+            <div class="row">
+              <div class="welcome-text">
+                Welcome back!
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="username" class="input-title">Username</label>
-              <input type="text" class="form-control input-field" id="username" placeholder="Username" [(ngModel)]="username">
+            <div class="row">
+              <div class="login-text">
+                Please login to access your
+                <span>Spaces</span> Dashboard
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="form-group">
-              <label for="password" class="input-title">Password</label>
-              <input type="password" class="form-control input-field" id="password" placeholder="Password" [(ngModel)]="password">
-            </div>
-          </div>
-          <div class="row">
-            <div class="login-footer">
-              <div class="col-xs-4 no-padding">
-                <div class="forgot-password">
-                  Forgot password?
+            <div class="row">
+              <div class="error-container">
+                <div [hidden]="!loginError">
+                  {{errorMessage}}
                 </div>
               </div>
-              <div class="col-xs-offset-5 col-xs-3 no-padding">
-                <div class="login-button" (click)="login()">
-                  LOGIN
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="username" class="input-title">Username</label>
+                <input type="text" class="form-control input-field" id="username" placeholder="Username" [(ngModel)]="username">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="password" class="input-title">Password</label>
+                <input type="password" class="form-control input-field" id="password" placeholder="Password" [(ngModel)]="password">
+              </div>
+            </div>
+            <div class="row">
+              <div class="login-footer">
+                <div class="col-xs-4 no-padding">
+                  <div class="forgot-password">
+                    Forgot password?
+                  </div>
+                </div>
+                <div class="col-xs-offset-5 col-xs-3 no-padding">
+                  <div class="login-button" (click)="login()">
+                    LOGIN
+                  </div>
                 </div>
               </div>
             </div>
