@@ -16,13 +16,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
  */
 import { UserService } from './services/user.service';
 import { InterceptorService } from './services/interceptor.service';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListUsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

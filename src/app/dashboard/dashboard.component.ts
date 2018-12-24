@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  isClicked: boolean;
+  userObject:object;
   constructor() { }
 
   ngOnInit() {
   }
-
+  checkClicked(userObject: object) {
+    this.userObject = userObject;
+    this.isClicked = !this.isClicked;
+    console.log("is clicked?", this.isClicked);
+  }
 }
