@@ -1,13 +1,61 @@
-  <div class="row" [hidden]="isClicked">
-    <div class="col-xs-10 col-xs-offset-1">
-      <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+<div class="row">
+  <div class="dashboard-header">
+    <div class="container">
+      <div class="row">
+        <div class="directory-font">
+          Home/Dashboard
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 no-padding">
+          Users List
+        </div>
+        <div class="col-xs-offset-6 col-xs-2">
+          +New User
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row" [hidden]="!isClicked">
-    <div class="col-xs-7 col-xs-offset-1">
-      <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+</div>
+<div class="container">
+  <div class="dashboard-container" [hidden]="isClicked">
+    <div class="row">
+      <div class="dashboard-title">
+        <div class="col-xs-2">
+          User
+        </div>
+        <div class="col-xs-offset-7 col-xs-3">
+          Actions
+        </div>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <app-user-detail [userObject]="userObject"></app-user-detail>
+    <div class="row">
+      <div class="col-xs-12">
+        <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+      </div>
     </div>
   </div>
+  <div class="list">
+
+    <div class="row" [hidden]="!isClicked">
+      <div class="col-xs-8 dashboard-container">
+        <div class="row">
+          <div class="dashboard-title">
+            <div class="col-xs-2">
+              User
+            </div>
+            <div class="col-xs-offset-7 col-xs-3">
+              Actions
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+        </div>
+      </div>
+      <div class="col-xs-4 user-details-container">
+        <app-user-detail [userObject]="userObject"></app-user-detail>
+      </div>
+    </div>
+  </div>
+</div>

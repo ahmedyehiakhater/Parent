@@ -1,0 +1,35 @@
+.user-image{
+    padding: 25px;
+}
+.user-image img{
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
+}
+.user-field{
+    padding: 60px 0px;
+}
+.user-name{
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+}
+.interaction-icon{
+    color: #8e44ad;
+    border: 1px solid #8e44ad;
+    width: 20px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1px;
+}
+.next-arrow{
+    color: #8e44ad;
+    width: 20px;
+    text-align: center;
+    padding: 1px;
+}
