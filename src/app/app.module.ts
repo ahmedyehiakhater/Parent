@@ -11,12 +11,14 @@ import { LoginComponent } from './login/login.component';
  * Services import
  */
 import { UserService } from './services/user.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
