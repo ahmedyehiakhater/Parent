@@ -1,0 +1,45 @@
+.dashboard-header{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.directory-font{
+    font-family: Heebo;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8e44ad;
+}
+.page-title{
+    font-family: Heebo;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+}
+.add-button {
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #8e44ad;
+    color: white;
+    width: 110px;
+}
+
+.add-button:hover {
+    border: 1px solid #8e44ad;
+    background: white;
+    color: #8e44ad;
+    cursor: pointer;
+}
+.row-align{
+    padding: 10px 0px;
+}

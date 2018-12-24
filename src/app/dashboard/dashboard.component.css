@@ -1,19 +1,4 @@
-.dashboard-header{
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-.directory-font{
-    font-family: Heebo;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #8e44ad;
-}
+
 .dashboard-container{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;

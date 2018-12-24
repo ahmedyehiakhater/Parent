@@ -18,6 +18,7 @@ import { UserService } from './services/user.service';
 import { InterceptorService } from './services/interceptor.service';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     LoginComponent,
     DashboardComponent,
     ListUsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    DashboardHeaderComponent
   ],
   imports: [
     BrowserModule,
