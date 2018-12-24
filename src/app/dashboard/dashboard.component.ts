@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   isClicked: boolean;
-  userObject:object;
+  userObject: object;
   constructor() { }
 
   ngOnInit() {
   }
-  checkClicked(userObject: object) {
-    this.userObject = userObject;
-    this.isClicked = !this.isClicked;
+  getUser(userData) {
+    this.userObject = userData;
+    console.log("user data in db component", this.userObject);
+  }
+  checkClicked(clicked: boolean) {
+    this.isClicked = clicked;
     console.log("is clicked?", this.isClicked);
   }
 }

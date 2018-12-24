@@ -17,4 +17,7 @@ export class UserService {
     }
     return this.http.post(`${this.host}/api/login`, userCredentials);
   }
+  listUsers(){
+    return this.http.get(`${this.host}/api/users?per_page=6`);
+  }
 }

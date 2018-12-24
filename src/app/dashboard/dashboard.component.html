@@ -1,2 +1,13 @@
-<app-list-users (isClicked)="checkClicked($event)"></app-list-users>
-<app-user-detail [userObject]="userObject"></app-user-detail>
+<div class="row" [hidden]="isClicked">
+  <div class="col-xs-12">
+    <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+  </div>
+</div>
+<div class="row" [hidden]="!isClicked">
+  <div class="col-xs-8">
+    <app-list-users (isClicked)="checkClicked($event)" (selectedUser)="getUser($event)"></app-list-users>
+  </div>
+  <div class="col-xs-4">
+    <app-user-detail [userObject]="userObject"></app-user-detail>
+  </div>
+</div>
