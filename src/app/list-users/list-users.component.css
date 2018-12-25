@@ -1,15 +1,18 @@
-.user-image{
+.user-image {
     padding: 25px;
 }
-.user-image img{
+
+.user-image img {
     width: 100px;
     height: 100px;
-    border-radius:100%;
+    border-radius: 100%;
 }
-.user-field{
+
+.user-field {
     padding: 60px 0px;
 }
-.user-name{
+
+.user-name {
     font-family: Heebo;
     font-size: 15px;
     font-weight: 500;
@@ -19,7 +22,8 @@
     letter-spacing: normal;
     color: #34495e;
 }
-.interaction-icon{
+
+.interaction-icon {
     color: #8e44ad;
     border: 1px solid #8e44ad;
     width: 20px;
@@ -27,9 +31,27 @@
     border-radius: 5px;
     padding: 1px;
 }
-.next-arrow{
+
+.next-arrow {
     color: #8e44ad;
     width: 20px;
     text-align: center;
     padding: 1px;
+}
+
+.user-selected {
+    background-color: #8e44ad;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.user-selected:focus {
+    outline: none;
+}
+
+.user-selected .user-name {
+    color: white;
+}
+.user-selected .next-arrow{
+    color: white;
 }

@@ -1,4 +1,4 @@
-<div class="user-container" *ngFor="let user of users; let i = index" (click)="viewUser(i)" routerLink="user/{{user.id}}">
+<div class="user-container" *ngFor="let user of users; let i = index" (click)="viewUser(i)" routerLink="user/{{user.id}}" routerLinkActive="user-selected">
   <div class="row">
     <div class="background-container">
       <div class="col-lg-2 no-padding">
