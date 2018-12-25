@@ -1,0 +1,11 @@
+.nsm-content {
+    border-radius: 20px !important;
+}
+
+.nsm-dialog[class*=nsm-dialog-animation-] {
+    margin-top: 30% !important;
+}
+
+.modal-container {
+    margin-top: 30%;
+}
