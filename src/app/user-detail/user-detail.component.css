@@ -1,11 +1,66 @@
-.nsm-content {
-    border-radius: 20px !important;
+.user-image {
+    text-align: center;
+    padding: 40px;
 }
 
-.nsm-dialog[class*=nsm-dialog-animation-] {
-    margin-top: 30% !important;
+.user-image img {
+    border-radius: 100%;
 }
 
-.modal-container {
-    margin-top: 30%;
+.exit-icon {
+    float: right;
+    cursor: pointer;
+    padding: 20px 20px 0px 0px;
+    font-size: 20px;
+    color: #8e44ad;
+}
+
+.user-name {
+    text-align: center;
+    font-family: Heebo;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
+}
+.buttons-container{
+    margin-top: 15px;
+}
+.edit-button {
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #8e44ad;
+    color: white;
+}
+
+.edit-button:hover {
+    border: 1px solid #8e44ad;
+    background: white;
+    color: #8e44ad;
+    cursor: pointer;
+}
+.delete-button {
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: #8e44ad;
+    border: 1px solid #8e44ad;
+}
+
+.delete-button:hover {
+    
+    background: #8e44ad;
+    color: white;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
 }
