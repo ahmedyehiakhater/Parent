@@ -1,29 +1,31 @@
-<div class="user-container" *ngFor="let user of users; let i = index" (click)="viewUser(i)">
+<div class="user-container" *ngFor="let user of users; let i = index" (click)="viewUser(i)" routerLink="user/{{user.id}}">
   <div class="row">
-    <div class="col-lg-2 no-padding">
-      <div class="user-image">
-        <img src="{{user?.avatar}}" alt="">
-      </div>
-    </div>
-    <div class="user-field">
-      <div class="col-lg-3">
-        <div class="user-name">
-          {{user?.first_name}}
+    <div class="background-container">
+      <div class="col-lg-2 no-padding">
+        <div class="user-image">
+          <img src="{{user?.avatar}}" alt="">
         </div>
       </div>
-      <div class="col-lg-offset-4 col-lg-1">
-        <div class="interaction-icon">
-          <i class="far fa-edit"></i>
+      <div class="user-field">
+        <div class="col-lg-3">
+          <div class="user-name">
+            {{user?.first_name}}
+          </div>
         </div>
-      </div>
-      <div class="col-lg-1">
-        <div class="interaction-icon">
-          <i class="far fa-trash-alt"></i>
+        <div class="col-lg-offset-4 col-lg-1">
+          <div class="interaction-icon">
+            <i class="far fa-edit"></i>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-1">
-        <div class="next-arrow">
-          <i class="fas fa-arrow-right"></i>
+        <div class="col-lg-1">
+          <div class="interaction-icon">
+            <i class="far fa-trash-alt"></i>
+          </div>
+        </div>
+        <div class="col-lg-1">
+          <div class="next-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
         </div>
       </div>
     </div>
