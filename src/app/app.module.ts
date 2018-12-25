@@ -11,6 +11,7 @@ import { AppRoutingModule } from './/app-routing.module';
  */
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 /**
  * Components import
  */
@@ -38,6 +39,7 @@ import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.co
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgxSmartModalModule.forRoot(),
     ToastrModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,

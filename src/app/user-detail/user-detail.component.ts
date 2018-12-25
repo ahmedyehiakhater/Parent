@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
@@ -9,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class UserDetailComponent implements OnInit {
   userData: object;
-  constructor(private activeRoute: ActivatedRoute, private userService: UserService, private toastrService: ToastrService) {
+  constructor(private activeRoute: ActivatedRoute, private userService: UserService, private toastrService: ToastrService, private modalService: NgxSmartModalService) {
     this.getUserId();
   }
 
@@ -39,7 +40,7 @@ export class UserDetailComponent implements OnInit {
   deleteUser(id) {
     this.userService.deleteUser(id).subscribe(
       success => {
-        this.toastrService.info("User has been deleted!","",{"positionClass":"toast-top-center"});
+        this.toastrService.info("User has been deleted!", "", { "positionClass": "toast-top-center" });
         console.log("user deleted", success)
       },
       error => {
