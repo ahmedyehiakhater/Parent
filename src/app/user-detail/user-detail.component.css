@@ -26,10 +26,12 @@
     letter-spacing: normal;
     color: #34495e;
 }
-.buttons-container{
+
+.buttons-container {
     margin-top: 15px;
 }
-.edit-button {
+
+.dark-button {
     padding: 10px;
     text-align: center;
     border-radius: 20px;
@@ -38,13 +40,14 @@
     color: white;
 }
 
-.edit-button:hover {
+.dark-button:hover {
     border: 1px solid #8e44ad;
     background: white;
     color: #8e44ad;
     cursor: pointer;
 }
-.delete-button {
+
+.light-button {
     padding: 10px;
     text-align: center;
     border-radius: 20px;
@@ -54,13 +57,32 @@
     border: 1px solid #8e44ad;
 }
 
-.delete-button:hover {
-    
+.light-button:hover {
     background: #8e44ad;
     color: white;
     cursor: pointer;
 }
 
-.center {
+.confirm-text {
     text-align: center;
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+}
+
+.user-name-modal {
+    text-align: center;
+    font-family: Heebo;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #34495e;
 }

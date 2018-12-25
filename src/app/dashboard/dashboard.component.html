@@ -35,8 +35,7 @@
         </div>
       </div>
       <div class="col-lg-4 user-details-container">
-        <router-outlet></router-outlet>
-        <!-- <app-user-detail [userObject]="userObject"></app-user-detail> -->
+        <router-outlet (deactivate)="checkClosed($event)"></router-outlet>
       </div>
     </div>
   </div>

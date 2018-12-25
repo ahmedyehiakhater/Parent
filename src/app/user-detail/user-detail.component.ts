@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { ToastrService } from 'ngx-toastr';
@@ -10,11 +10,12 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 })
 export class UserDetailComponent implements OnInit {
   userData: object;
-  constructor(private activeRoute: ActivatedRoute, private userService: UserService, private toastrService: ToastrService, private modalService: NgxSmartModalService) {
+  @Output() isClosed = new EventEmitter<boolean>();
+  constructor(private activeRoute: ActivatedRoute, private userService: UserService, private router: Router,
+    private toastrService: ToastrService, private modalService: NgxSmartModalService) {
     this.getUserId();
   }
 
-  @Input() userObject: object;
   /**
    * Subscribes to params observable to check for userId
    */
@@ -37,11 +38,17 @@ export class UserDetailComponent implements OnInit {
       }
     );
   }
-  deleteUser(id) {
-    this.userService.deleteUser(id).subscribe(
+  /**
+   * Deletes selected User, navigates back to dashboard and closes router component
+   */
+  deleteUser() {
+    this.userService.deleteUser(this.userData['id']).subscribe(
       success => {
         this.toastrService.info("User has been deleted!", "", { "positionClass": "toast-top-center" });
         console.log("user deleted", success)
+        this.modalService.close("deleteModal");
+        this.router.navigate(['/dashboard']);
+        this.isClosed.emit(true);
       },
       error => {
         console.log("Error", error);
