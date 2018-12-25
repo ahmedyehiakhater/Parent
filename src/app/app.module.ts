@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './/app-routing.module';
 /**
+ * UI imports
+ */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+/**
  * Components import
  */
 import { LoginComponent } from './login/login.component';
@@ -28,10 +33,12 @@ import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.co
     DashboardComponent,
     ListUsersComponent,
     UserDetailComponent,
-    DashboardHeaderComponent
+    DashboardHeaderComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     HttpModule,

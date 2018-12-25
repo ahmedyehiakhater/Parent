@@ -7,9 +7,11 @@ export class UserService {
   host: string = 'https://reqres.in';
   constructor(private http: HttpClient) { }
 
-  /**
-   * Calls API to login user
-   */
+ /**
+  * Calls API to login User
+  * @param username 
+  * @param password 
+  */
   loginUser(username, password) {
     var userCredentials = {
       "email": username,
