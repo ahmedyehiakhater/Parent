@@ -1,0 +1,59 @@
+<div class="dashboard-header">
+  <div class="container">
+    <div class="row">
+      <div class="directory-font">
+        Home/Dashboard
+      </div>
+    </div>
+    <div class="row row-align">
+      <div class="col-lg-4 no-padding">
+        <div class="page-title">
+          Users List
+        </div>
+      </div>
+      <div class="col-lg-offset-6 col-lg-2">
+        <div class="add-button" (click)="modalService.getModal('addModal').open()">
+          +New User
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ngx-smart-modal #addModal identifier="addModal">
+  <div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+      <div class="user-image">
+        <input type="file" name="" id="">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+  </div>
+  <div class="add-user-inputs">
+    <div class="row">
+      <div class="form-group">
+        <label for="username" class="input-title">Name</label>
+        <input type="text" class="form-control input-field" id="username" placeholder="Username" [(ngModel)]="username">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <label for="jobTitle" class="input-title">Job Title</label>
+        <input type="text" class="form-control input-field" id="jobTitle" placeholder="Job Title" [(ngModel)]="jobTitle">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="buttons-container">
+      <div class="col-xs-offset-1 col-xs-5">
+        <div class="light-button" (click)="addModal.close()">
+          Cancel
+        </div>
+      </div>
+      <div class="col-xs-5">
+        <div class="dark-button" id="addButton" (click)="addUser()">
+          Add
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-smart-modal>

@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="exit-icon" (click)="closeUser()">
+        <i class="fas fa-times"></i>
+    </div>
+</div>
+<div class="row">
+    <div class="user-image">
+        <img src="{{userData?.avatar}}" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="user-name">
+        {{userData?.first_name}}
+    </div>
+</div>
+<div class="row">
+    <div class="buttons-container">
+        <div class="col-xs-offset-1 col-xs-5">
+            <div class="dark-button" (click)="modalService.getModal('updateModal').open()">
+                <i class="far fa-edit"></i>
+                Edit
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="light-button" (click)="modalService.getModal('deleteModal').open()">
+                <i class="far fa-trash-alt"></i>
+                Delete
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-smart-modal #deleteModal identifier="deleteModal">
+    <div class="row">
+        <div class="confirm-text">
+            Are you sure you want to delete
+        </div>
+    </div>
+    <div class="row">
+        <div class="user-name-modal">
+            {{userData?.first_name}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="buttons-container">
+            <div class="col-xs-offset-1 col-xs-5">
+                <div class="light-button" (click)="deleteModal.close()">
+                    No
+                </div>
+            </div>
+            <div class="col-xs-5">
+                <div class="dark-button" (click)="deleteUser()">
+                    Yes
+                </div>
+            </div>
+        </div>
+    </div>
+</ngx-smart-modal>
+<ngx-smart-modal #updateModal identifier="updateModal">
+    <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+            <div class="user-image-modal">
+                <img src="{{userData?.avatar}}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="add-user-inputs">
+        <div class="row">
+            <div class="form-group">
+                <label for="username" class="input-title">Name</label>
+                <input type="text" class="form-control input-field" id="username" placeholder="Username" [(ngModel)]="username">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="jobTitle" class="input-title">Job Title</label>
+                <input type="text" class="form-control input-field" id="jobTitle" placeholder="Job Title" [(ngModel)]="jobTitle">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="buttons-container">
+            <div class="col-xs-offset-1 col-xs-5">
+                <div class="light-button" (click)="updateModal.close()">
+                    Cancel
+                </div>
+            </div>
+            <div class="col-xs-5">
+                <div class="dark-button" (click)="updateUser()">
+                    Update
+                </div>
+            </div>
+        </div>
+    </div>
+</ngx-smart-modal>

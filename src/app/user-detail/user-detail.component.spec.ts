@@ -1,35 +1,39 @@
-import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
-import { ListUsersComponent } from './../list-users/list-users.component';
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { UserDetailComponent } from './user-detail.component';
+import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
+import { ActivatedRoute, Data, Params } from '@angular/router';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
+import { ListUsersComponent } from '../list-users/list-users.component';
+import { ToastrService, ToastrModule } from 'ngx-toastr';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
-
+describe('UserDetailComponent', () => {
+  let component: UserDetailComponent;
+  let fixture: ComponentFixture<UserDetailComponent>;
+  let mockParams = { params: { id: 1 } }
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        LoginComponent,
+        UserDetailComponent,
         DashboardComponent,
         DashboardHeaderComponent,
         ListUsersComponent
       ],
-      providers:[
-        NgxSmartModalService
+      providers: [
+        NgxSmartModalService,
+        ToastrService
       ],
       imports: [
-        HttpClientTestingModule,
+        ToastrModule.forRoot(),
+        FormsModule,
         RouterTestingModule.withRoutes([
           { path: 'dashboard', component: DashboardComponent }
         ]),
-        FormsModule,
+        HttpClientTestingModule,
         NgxSmartModalModule
       ]
     })
@@ -37,7 +41,7 @@ describe('LoginComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(UserDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -45,13 +49,4 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should call function login on button click', async(() => {
-    spyOn(component, 'login');
-    fixture.detectChanges();
-    let button = fixture.debugElement.nativeElement.querySelector('#loginButton');
-    button.click();
-    fixture.whenStable().then(() => {
-      expect(component.login).toHaveBeenCalled();
-    });
-  }));
 });
