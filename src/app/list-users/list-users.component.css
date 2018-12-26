@@ -1,3 +1,18 @@
+.user-container:hover {
+    background-color: #8e44ad;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+}
+
+.user-container:hover .user-name {
+    color: white;
+}
+
+.user-container:hover .next-arrow {
+    color: white
+}
+
 .user-image {
     padding: 25px;
 }
@@ -52,6 +67,7 @@
 .user-selected .user-name {
     color: white;
 }
-.user-selected .next-arrow{
+
+.user-selected .next-arrow {
     color: white;
 }

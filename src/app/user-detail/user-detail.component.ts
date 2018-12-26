@@ -15,7 +15,13 @@ export class UserDetailComponent implements OnInit {
     private toastrService: ToastrService, private modalService: NgxSmartModalService) {
     this.getUserId();
   }
-
+  /**
+   * Closes user details tab
+   */
+  closeUser() {
+    this.router.navigate(['/dashboard']);
+    this.isClosed.emit(true);
+  }
   /**
    * Subscribes to params observable to check for userId
    */
