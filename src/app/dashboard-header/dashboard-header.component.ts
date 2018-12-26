@@ -17,6 +17,9 @@ export class DashboardHeaderComponent implements OnInit {
   jobTitle: string;
   ngOnInit() {
   }
+  /**
+   * Adds new user and triggers toastr on success
+   */
   addUser() {
     console.log("User name ", this.username, "title ", this.jobTitle)
     this.userService.addUser(this.username, this.jobTitle).subscribe(
