@@ -1,9 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { Router } from '@angular/router';
+import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
+import { ListUsersComponent } from '../list-users/list-users.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
+})
+@NgModule({
+  imports: [
+    DashboardHeaderComponent,
+    ListUsersComponent
+  ]
 })
 export class DashboardComponent implements OnInit {
   isClicked: boolean;
@@ -14,8 +22,6 @@ export class DashboardComponent implements OnInit {
   }
   getUser(userData) {
     this.userObject = userData;
-    // this.router.navigate(['/user', this.userObject['id']]);
-    console.log("user data in db component", this.userObject);
   }
   checkClosed(closed: boolean) {
     console.log("Inside closed");

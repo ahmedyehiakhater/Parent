@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListUsersComponent } from './list-users.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { UserDetailComponent } from '../user-detail/user-detail.component';
+import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
 
 describe('ListUsersComponent', () => {
   let component: ListUsersComponent;
@@ -8,9 +12,22 @@ describe('ListUsersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListUsersComponent ]
+      declarations: [
+        ListUsersComponent,
+        UserDetailComponent
+      ],
+      providers: [
+        NgxSmartModalService
+      ],
+      imports: [
+        HttpClientTestingModule,
+        NgxSmartModalModule,
+        RouterTestingModule.withRoutes([
+          { path: 'user/:id', component: UserDetailComponent }
+        ])
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
