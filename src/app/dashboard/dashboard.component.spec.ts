@@ -1,3 +1,5 @@
+import { ToastrService, ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from './dashboard.component';
@@ -21,11 +23,14 @@ describe('DashboardComponent', () => {
         UserDetailComponent
       ],
       providers: [
-        NgxSmartModalService
+        NgxSmartModalService,
+        ToastrService
       ],
       imports: [
         HttpClientTestingModule,
+        ToastrModule.forRoot(),
         NgxSmartModalModule,
+        FormsModule,
         RouterTestingModule.withRoutes([
           { path: 'user/:id', component: UserDetailComponent }
         ])

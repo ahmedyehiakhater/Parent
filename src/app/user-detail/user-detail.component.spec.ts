@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserDetailComponent } from './user-detail.component';
@@ -28,11 +29,12 @@ describe('UserDetailComponent', () => {
       ],
       imports: [
         ToastrModule.forRoot(),
+        FormsModule,
         RouterTestingModule.withRoutes([
           { path: 'dashboard', component: DashboardComponent }
         ]),
         HttpClientTestingModule,
-        NgxSmartModalModule,
+        NgxSmartModalModule
       ]
     })
       .compileComponents();
