@@ -46,7 +46,11 @@ describe('DashboardComponent', () => {
   it('should change the value of isClicked to false if input is true', () => {
     const component = new DashboardComponent(router);
     component.checkClosed(true);
-    console.log("dashboard is clicked", component.isClicked);
     expect(component.isClicked).toBe(false, 'False after closed is true');
+  });
+  it('should change the value of isClicked to the value of input', () => {
+    const component = new DashboardComponent(router);
+    component.checkClicked(true);
+    expect(component.isClicked).toBe(true, 'true after set to true');
   });
 });

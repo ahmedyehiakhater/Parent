@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./list-users.component.css']
 })
 export class ListUsersComponent implements OnInit {
-  @Output() selectedUser = new EventEmitter<object>();
+  // @Output() selectedUser = new EventEmitter<object>();
   @Output() isClicked = new EventEmitter<boolean>();
   users: object;
   constructor(private userService: UserService) { }
@@ -25,11 +25,9 @@ export class ListUsersComponent implements OnInit {
     );
   }
   /**
-   * Detects user selected event and emits it to parent component dashboard
+   * Triggers isClicked event to open user-details
    */
-  viewUser(index) {
-    this.selectedUser.emit(this.users[index]);
+  viewUser() {
     this.isClicked.emit(true);
-    console.log("user", this.users[index]);
   }
 }
