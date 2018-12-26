@@ -86,3 +86,38 @@
     letter-spacing: normal;
     color: #34495e;
 }
+
+.user-image-modal {
+    position: absolute;
+    top: -84px;
+    background: #7f8c8d;
+    width: 100px;
+    color: white;
+    height: 100px;
+    font-size: 45px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.user-image-modal:hover {
+    cursor: pointer;
+}
+
+.user-image-modal img {
+    border-radius: 100%;
+}
+
+.add-user-inputs {
+    margin-top: 30px;
+}
+
+.add-user-inputs .input-title {
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7f8c8d;
+}
