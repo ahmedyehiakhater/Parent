@@ -39,4 +39,11 @@ export class UserService {
   deleteUser(id){ 
     return this.http.delete(`${this.host}/api/users/${id}`);    
   }
+  addUser(name, job){
+    var userCredentials={
+      "name": name,
+      "job": job
+    }
+    return this.http.post(`${this.host}/api/users`, userCredentials);    
+  }
 }
