@@ -20,9 +20,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-  getUser(userData) {
-    this.userObject = userData;
-  }
   checkClosed(closed: boolean) {
     console.log("Inside closed");
     if (closed) {
