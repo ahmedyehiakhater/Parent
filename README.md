@@ -1,4 +1,4 @@
-![Build_Status].(https://travis-ci.org/ahmedyehiakhater/parent-task.svg?branch=master)
+!.[Build_Status].(https://travis-ci.org/ahmedyehiakhater/parent-task.svg?branch=master)
 # ParentTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
