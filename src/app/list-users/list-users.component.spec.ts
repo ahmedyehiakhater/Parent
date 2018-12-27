@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListUsersComponent } from './list-users.component';
@@ -22,6 +23,7 @@ describe('ListUsersComponent', () => {
       imports: [
         HttpClientTestingModule,
         NgxSmartModalModule,
+        FormsModule,
         RouterTestingModule.withRoutes([
           { path: 'user/:id', component: UserDetailComponent }
         ])

@@ -1,10 +1,12 @@
+import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
+import { ListUsersComponent } from './../list-users/list-users.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
-import { HttpClientTestingModule } from 'node_modules/@angular/common/http/testing';
-import { RouterTestingModule } from 'node_modules/@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { FormsModule } from 'node_modules/@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { DashboardHeaderComponent } from '../dashboard-header/dashboard-header.component';
 
 describe('LoginComponent', () => {
@@ -15,15 +17,20 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         LoginComponent,
-        // DashboardComponent,
-        // DashboardHeaderComponent
+        DashboardComponent,
+        DashboardHeaderComponent,
+        ListUsersComponent
+      ],
+      providers:[
+        NgxSmartModalService
       ],
       imports: [
         HttpClientTestingModule,
         RouterTestingModule.withRoutes([
-          // { path: 'dashboard', component: DashboardComponent }
+          { path: 'dashboard', component: DashboardComponent }
         ]),
-        FormsModule
+        FormsModule,
+        NgxSmartModalModule
       ]
     })
       .compileComponents();
@@ -38,4 +45,13 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call function login on button click', async(() => {
+    spyOn(component, 'login');
+    fixture.detectChanges();
+    let button = fixture.debugElement.nativeElement.querySelector('#loginButton');
+    button.click();
+    fixture.whenStable().then(() => {
+      expect(component.login).toHaveBeenCalled();
+    });
+  }));
 });
